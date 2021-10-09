@@ -1,8 +1,35 @@
-#include <iostream>
-#include <vector>
-#include <string>
+// #include <string>
+// #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+
+int main() {
+    string s;
+    cin>>s;
+    
+
+    cout<<"The string u entered is: "<<s<<endl;
+    // int t;
+    // cin >>t;
+
+    // while (t--)
+    // {
+    //     string n;
+    //     cin >> n;
+    // }
+    // float x=10.3445f;
+	
+	// cout<<fixed<<setprecision(9)<<x<<endl;
+	// cout<<fixed<<setprecision(2)<<x<<endl;
+	// cout<<fixed<<setprecision(3)<<x<<endl;
+	// cout<<fixed<<setprecision(0)<<x<<endl;
+
+    return 0;
+
+}
+
+
+// using namespace std;
 // const long long mod = 1e9 + 7;
 
 
@@ -11,8 +38,8 @@ int square(int x) {
 }
 
 
-int main()
-{   
+// int main()
+// {   
     // int a=45;
     // int *ptra;
     // ptra = &a;
@@ -21,14 +48,15 @@ int main()
     // cout << "a ka address nikalna = " << &a << endl;
     // cout << "a ka address = " << ptra << endl;
     // cout << "a ki value using prta = " << *ptra << endl;
-    vector<string> vv(2, string(2, '='));
-    vector<vector<int>> v(2, vector<int>(2, 3));
-    cout << v[0][0] << endl;
-    cout << v[1][1] << endl;
-    cout << v[1][0] << endl;
-    cout << v[0][1] << endl;
-    return 0;
-}
+    // vector<string> vv(2, string(2, '='));
+    // vector<vector<int>> v(2, vector<int>(2, 3));
+    // cout << v[0][0] << endl;
+    // cout << v[1][1] << endl;
+    // cout << v[1][0] << endl;
+    // cout << v[0][1] << endl;
+//     cout << "Hello babyyy" << endl;
+//     return 0;
+// }
 
    
 
@@ -54,6 +82,6 @@ int main()
 // vector<string> vv(2, string(2, '='));
 // vector<vector<int>> v(2, vector<int>(2, 3));
 
-// STRING 
+// STRING "aman" vs char 'a' 
 // only + and - can be used
 // here strings can't be multiplied to inceament it..
