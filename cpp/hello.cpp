@@ -3,12 +3,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int countDivisors(int n) { 
+    int cnt = 0; 
+    for (int i = 1; i <= sqrt(n); i++) { 
+        if (n % i == 0) { 
+            // If divisors are equal, 
+            // count only one 
+            if (n / i == i) 
+                cnt++; 
+  
+            else // Otherwise count both 
+                cnt = cnt + 2; 
+        } 
+    } 
+    return cnt; 
+} 
+
 int main() {
-    string s;
-    cin>>s;
+    // string s;
+    // cin>>s;
+    int n; cout<<"Enter a number whose all factors you want :"; cin>>n;
+
+    for (int i = 1; i*i <= n; i++)
+    {
+        if (n%i == 0) {
+            if (i == n/i) cout<<i<<", ";
+            else cout<<i<<", "<<n/i<<", ";
+        }
+    }
+    cout<<endl;
     
 
-    cout<<"The string u entered is: "<<s<<endl;
+    // cout<<"The string u entered is: "<<s<<endl;
     // int t;
     // cin >>t;
 
