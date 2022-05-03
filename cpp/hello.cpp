@@ -19,40 +19,90 @@ int countDivisors(int n) {
     return cnt; 
 } 
 
-int main() {
-    // string s;
-    // cin>>s;
-    int n; cout<<"Enter a number whose all factors you want :"; cin>>n;
-
-    for (int i = 1; i*i <= n; i++)
-    {
-        if (n%i == 0) {
-            if (i == n/i) cout<<i<<", ";
-            else cout<<i<<", "<<n/i<<", ";
-        }
+bool isBC(string s) {
+    if (!(s[0] - '0' >= 0 && s[0] - '0' <= 9)) {
+        return false;
     }
-    cout<<endl;
     
+    for(int i=2; i<s.size()-1; i++) {
+        if (s[i]=='[' || s[i]==']' ) return false;
+    }
+                
+    return true;
+}
 
-    // cout<<"The string u entered is: "<<s<<endl;
-    // int t;
-    // cin >>t;
+int strtoint(string s) {
+    int a=0;
+    int t=1;
+    int n=s.size()-1;
+    while(n>=0) {
+        a = a + (s[n] - '0')*t;
+        t*=10;
+        n--;
+    }
 
-    // while (t--)
-    // {
-    //     string n;
-    //     cin >> n;
+    return a;
+}
+
+int main() {
+    // cout<<stoi("50");
+    cout<<strtoint("050043");
+    // cout<<true;
+    // multiset<string> s = {"a",  "c", "boy", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+    // auto t = s.find("boy");
+    // t--;
+    // cout<<"the searched result is '"<<*t<<"'"<<endl;
+    
+    // int n[4] = {1,2,3,4};
+    // // slice n from 0 to 2 index
+    // int  t=n[1];
+    // cout<<t[-1]<<endl;
+    // unordered_map<int, int> m;
+    // m[1] = 1;
+    // m[2] = 4;
+    // m[3] = 9;
+    // auto x = m.find(4);
+    // cout<<(*x).first<<endl;
+
+    // set<int> v = {2,3,4};
+    // auto it=v.begin();
+    // it++; it++; it++;
+    // cout<<*(it)<<endl;
+    // v.erase(it);
+    // it++;
+    // it++;
+    // if(it==v.end()){
+    //     cout<<"yayyy"<<endl;
+    //      it=v.begin();
     // }
-    // float x=10.3445f;
-	
-	// cout<<fixed<<setprecision(9)<<x<<endl;
-	// cout<<fixed<<setprecision(2)<<x<<endl;
-	// cout<<fixed<<setprecision(3)<<x<<endl;
-	// cout<<fixed<<setprecision(0)<<x<<endl;
+    // cout<<*(it)<<"-"<<v.size()<<endl;
+    // it++;
 
+    vector<string> s = {"45"};
+    // convert s[0] to int
+    int n = stoi(s[0]);
+    // cout type of s[0]
+    // cout<<'9'-'0';
     return 0;
 
 }
+
+
+// cout<<"The string u entered is: "<<s<<endl;
+// int t;
+// cin >>t;
+
+// while (t--)
+// {
+//     string n;
+//     cin >> n;
+// }
+// float x=10.3445f;
+
+// cout<<fixed<<setprecision(9)<<x<<endl;
+// cout<<fixed<<setprecision(2)<<x<<endl;
+// cout<<fixed<<setprecision(3)<<x<<endl;
+// cout<<fixed<<setprecision(0)<<x<<endl;
 
 
 // using namespace std;
@@ -111,3 +161,7 @@ int square(int x) {
 // STRING "aman" vs char 'a' 
 // only + and - can be used
 // here strings can't be multiplied to inceament it..
+
+
+// unordered_map<int, int> mp;
+// mp.find(target - nums[i]) != mp.end()
