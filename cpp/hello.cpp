@@ -19,20 +19,40 @@ int countDivisors(int n) {
     return cnt; 
 } 
 
+double findNthRootOfM(int n, long long m) {
+	// Write your code here.
+    double ans = pow(m, 1.0/n);
+    cout<<setprecision(7);
+    return ans;
+}
+
 int main() {
     // string s;
     // cin>>s;
-    int n; cout<<"Enter a number whose all factors you want :"; cin>>n;
+    // int n; cout<<"Enter a number whose all factors you want :"; cin>>n;
 
-    for (int i = 1; i*i <= n; i++)
-    {
-        if (n%i == 0) {
-            if (i == n/i) cout<<i<<", ";
-            else cout<<i<<", "<<n/i<<", ";
-        }
-    }
-    cout<<endl;
+    // for (int i = 1; i*i <= n; i++)
+    // {
+    //     if (n%i == 0) {
+    //         if (i == n/i) cout<<i<<", ";
+    //         else cout<<i<<", "<<n/i<<", ";
+    //     }
+    // }
+    // cout<<endl;
     
+    // cout<<findNthRootOfM(3, 9)<<endl;
+    // bool a = (1 <= -1 && -1 <=6);
+
+    // vector<pair<string,pair<int,int>>> dir = { {"D",{1,0}}, {"L",{0,-1}}, {"R", {0,1}}, {"U",{-1, 0}} };
+    
+    char a[] = "ams";
+    a[1]='g';
+    cout<<a     ;
+
+    // for (pair <string,pair<int,int>> p : dir) {
+    //     cout<<p.first<<" "<<p.second.first<<" "<<p.second.second<<endl;
+    // }
+
 
     // cout<<"The string u entered is: "<<s<<endl;
     // int t;
