@@ -25,6 +25,7 @@ ll strToInt(string s) {
 void recur (vi &res, int c4, int c7, string s, ll target) {
     // cout<<s<<" "<<c4<<" "<<c7<<endl;
     if (c4 ==0 && c7==0) {
+            // cout<<s<<" ";
         ll tt = strToInt(s);
         if (target <= tt ) {
             res.push_back(tt);
@@ -52,7 +53,11 @@ int main()
     string s; cin>>s;
     int n=s.size();
     ll num = strToInt(s);
-    
+    vi res;
+    recur(res, (n+1)/2, (n+1)/2, "", num );
+    recur(res, (n+1)/2 + 1, (n+1)/2 + 1, "", num );
+    sort(res.begin(), res.end());
+    cout<<(res[0])<<endl;
 
 	return 0;	
 }
